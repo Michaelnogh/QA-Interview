@@ -2,7 +2,7 @@
 
 תודה על הרצון לתרום למאגר!
 יש רשימת פקודות מוכנה לעבודה עם גיטהאב תחת:
-6-Git/How_To_Contribute.md
+[6-Git/How_To_Contribute.md](6-Git/How_To_Contribute.md)
 
 ## איך מוסיפים שאלות?
 
