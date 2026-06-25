@@ -1,5 +1,5 @@
 # how to collaborate, GitHub project with team.
-- only 1 will be the "Owner" all other fork his project and PR (Pull Request) to it - that way we dont need to pay GitHub.
+- only 1/2 will be the "Owner" all other fork his project and PR (Pull Request) to it - that way we dont need to pay GitHub.
 - the repository must be "public" for not to pay.
 
 
@@ -129,11 +129,10 @@ git push origin my-feature-branch --force-with-lease
 	# after rebase must push with "force" - as we mess with history
 	# "--force-with-lease" is safer than "--force" — it refuses to push if someone else updated the branch remotely.
 ```
+---
 
 
-
-6. hopefully you do not need that part:
-* solve upstream conflicts (when owner updates remote, and has conflicts with our local):
+6. solve upstream conflicts (when owner updates remote, and has conflicts with our local):
 * we have 3 options: "fetch & merge"/"pull" (called "back-merge") and "rebase" - they are the same with minor difference. usually experts use rebase as it more clean. but back-merge is safer and create more commits.
 
 strategy to solve conflict:
@@ -196,4 +195,22 @@ git add <file name>
 git commit
 git checkout main
 git merge branch_for_merge
+```
+
+
+7. extra - Owner prepective - after accept GitHub PR - how to update local:
+```bash
+# alternative command (exactly the same - shorter):
+git checkout main
+git pull origin main
+
+	# alternative command - exactly the same (longer version)
+	git checkout main
+	git fetch
+	git diff main origin/main
+	git merge origin/main
+
+
+git status
+	# make sure no conflicts
 ```
