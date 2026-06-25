@@ -108,8 +108,9 @@ Submit PR
 ---
 ---
 
-5. solve upstream conflicts (when owner updates remote, and has conflicts with our local):
-* we have 3 options: "fetch & merge", "rebase" and "pull" - they are the same with minor difference. usually experts use rebase as it more clean. but back-merge is safer and create more commits.
+5. hopefully you do not need that part:
+* solve upstream conflicts (when owner updates remote, and has conflicts with our local):
+* we have 3 options: "fetch & merge"/"pull" (called "back-merge") and "rebase" - they are the same with minor difference. usually experts use rebase as it more clean. but back-merge is safer and create more commits.
 
 strategy to solve conflict:
 1. abort merge to main
@@ -135,7 +136,7 @@ git checkout main
 git merge branch_for_merge
 ```
 ```bash # 2nd way "fetch & merge"
-# 2nd way merge:
+# 2nd way back-merge:
 git fetch upstream
 git merge upstream/main
 
@@ -156,7 +157,7 @@ git checkout main
 git merge branch_for_merge
 ```
 ```bash # 3rd way "pull":
-# 3rd way pull:
+# 3rd way back-merge pull(shortcut for fetch & merge):
 git pull upstream main
 
 #### here we got "merge conflict error"!!! ####
